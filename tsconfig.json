@@ -23,6 +23,6 @@
     "removeComments": false,
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src", "declarations.d.ts"],
+  "include": ["src"],
   "exclude": ["node_modules/**/*", "build/**/*"]
 }

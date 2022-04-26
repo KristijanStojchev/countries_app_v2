@@ -4,7 +4,6 @@ import LoadingSpinner from "../Components/Loader";
 import { useCountries } from "../Hooks/UseCountries";
 import { useCountry } from "../Hooks/UseCountry";
 
-// import "./CountriesList.css";
 import styles from "./CountriesList.module.scss";
 
 export default function CountriesList() {
