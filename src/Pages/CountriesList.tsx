@@ -5,7 +5,6 @@ import { useCountries } from "../Hooks/UseCountries";
 import { useCountry } from "../Hooks/UseCountry";
 
 // import "./CountriesList.css";
-// @ts-ignore
 import styles from "./CountriesList.module.scss";
 
 export default function CountriesList() {
