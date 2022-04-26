@@ -9,18 +9,6 @@ const GET_COUNTRIES = gql`
   }
 `;
 
-// export const GET_COUNTRY = gql`
-//   query countries($code: ID!) {
-//     country(code: $code) {
-//       name
-//       capital
-//       currency
-//       phone
-//       native
-//     }
-//   }
-// `;
-
 export const useCountries = () => {
   const { error, loading, data } = useQuery(GET_COUNTRIES);
 
