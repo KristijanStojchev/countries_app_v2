@@ -57,7 +57,8 @@ export default function CountriesList() {
               }}
               key={country.code}
             >
-              {country.name}
+              <h1>{country.name}</h1>
+              <p>{country.emoji}</p>
             </li>
           );
         })}
