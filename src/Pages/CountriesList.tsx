@@ -1,25 +1,17 @@
-import React, { useState } from "react";
-// @ts-ignore
+import { useState } from "react";
 import Modal from "react-modal";
 import LoadingSpinner from "../Components/Loader";
 import { useCountries } from "../Hooks/UseCountries";
 import { useCountry } from "../Hooks/UseCountry";
-// import { useQuery } from "@apollo/client";
 
-// loader za loading countries, useQuery so getCountry vo poseben hook, modalcontent da e samo country code, skip parametar da ne pravi error
-
-import "./CountriesList.css";
+// import "./CountriesList.css";
+// @ts-ignore
+import styles from "./CountriesList.module.scss";
 
 export default function CountriesList() {
   const { error, loading, data } = useCountries();
   const [isModalOpened, setisModalOpened] = useState(false);
   const [modalContent, setModalContent] = useState(null);
-
-  // const {
-  //   error: errorCountry,
-  //   loading: loadingCountry,
-  //   data: dataCountry,
-  // } = useQuery(GET_COUNTRY, { variables: { code: modalContent.code } });
 
   const {
     error: errorCountry,
@@ -57,7 +49,7 @@ export default function CountriesList() {
 
   return (
     <div className="App">
-      <ul className="CountriesList">
+      <ul className={styles.CountriesList}>
         {data.countries.map((country: any) => {
           return (
             <li

@@ -1,0 +1,16 @@
+.CountriesList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  li {
+    list-style: none;
+    margin: 2rem 2rem;
+    cursor: pointer;
+  }
+}
+
+// .CountriesList li {
+//   list-style: none;
+//   margin: 2rem 2rem;
+//   cursor: pointer;
+// }
