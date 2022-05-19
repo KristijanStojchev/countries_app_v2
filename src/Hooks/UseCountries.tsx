@@ -5,7 +5,21 @@ const GET_COUNTRIES = gql`
     countries {
       code
       name
+      capital
+      currency
+      phone
+      native
       emoji
+      emojiU
+      continent {
+        name
+      }
+      languages {
+        name
+      }
+      states {
+        name
+      }
     }
   }
 `;

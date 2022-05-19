@@ -10,7 +10,10 @@ export default function BasicTable() {
   const { error, loading, data } = useCountries();
 
   const columns = useMemo(() => COLUMNS, []);
-  const TableData = useMemo(() => MOCK_DATA, []);
+  const TableData = useMemo(
+    () => (loading ? [] : data.countries),
+    [data, loading]
+  );
 
   const tableInstance = useTable({
     columns,
@@ -19,9 +22,6 @@ export default function BasicTable() {
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;
-
-  // console.log(MOCK_DATA);
-  // console.log(data.countries);
 
   if (loading) {
     return (

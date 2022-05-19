@@ -39,7 +39,6 @@ export default function CountriesList() {
     return <div>Something went wrong!</div>;
   }
 
-  console.log(data.countries);
   return (
     <div className="App">
       <ul className={styles.CountriesList}>
